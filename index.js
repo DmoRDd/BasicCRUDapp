@@ -2,7 +2,7 @@ import express from 'express';
 import fs from 'fs';
 const crud = express();
 const port = 3000;
-const notes = JSON.parse(fs.readFileSync("./src/data/db.json"));
+const notes = JSON.parse(fs.readFileSync("src/data/db.json"));
 
 crud.use(express.json());
 
