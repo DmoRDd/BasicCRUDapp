@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "ndmstart": "npx nodemon index.js"
+    "ndmstart": "npx nodemon src/index.js"
   },
   "keywords": [],
   "author": "",

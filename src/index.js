@@ -12,7 +12,7 @@ crud.get("/", (req, res) => {
 
 crud.get("/notes", (req, res) => {
     if(notes.length == 0){
-        res.status(400).send("Henuz not eklenmedi.");
+        return res.status(400).send("Henuz not eklenmedi.");
     }
     return res.status(200).send(notes);
 });
@@ -53,15 +53,14 @@ crud.post("/notes", (req, res) => {
         return res.status(200).send(notes);
     }
     catch(err){
-        res.status(404).send(err.message);
+        return res.status(404).send(err.message);
     }
 });
 
 crud.put("/notes/:id", (req, res) => {
     try{
         const { id } = req.params;
-        const { title } = req.body;
-        const { content } = req.body;
+        const { title, content } = req.body;
         const note = notes.find(not => not.id == id); 
         if(!note){
             throw new Error("Aradiginiz not bulunamadi...")
@@ -77,7 +76,7 @@ crud.put("/notes/:id", (req, res) => {
         return res.status(200).send(note);
     }
     catch(err){
-        res.status(404).send(err.message);
+        return res.status(404).send(err.message);
     }
 });
 
@@ -95,7 +94,7 @@ crud.delete("/notes/:id", (req, res) => {
         return res.status(200).send(note);
     }
     catch(err){
-        res.status(404).send(err.message);
+        return res.status(404).send(err.message);
     }
 });
 
