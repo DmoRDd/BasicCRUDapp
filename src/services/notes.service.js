@@ -1,7 +1,4 @@
-const {
-    readData
-    //writeData
-} = require('../libs/fileSystem.lib');
+import { readData } from '../libs/fileSystem.lib';
 
 const notes = readData();
 
@@ -65,6 +62,6 @@ const deleteNote = (id) => {
     notes.splice(noteIndex, 1);
 
     return dNote;
-} 
+}
 
-module.exports = {getNotes, getNoteById, addNote, updateNote, deleteNote};
+export default {getNotes, getNoteById, addNote, updateNote, deleteNote};

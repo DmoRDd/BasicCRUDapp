@@ -1,4 +1,4 @@
-const services = require('../services/notes.service.js');
+import services from '../services/notes.service.js';
 
 const mainPage = (req, res) => {
     return res.status(200).send("NOTES APP");
@@ -63,4 +63,4 @@ const deleteNotes = (req, res) => {
     }
 }
 
-module.exports = {mainPage, getNotesAll, getNotesById, addNotes, updateNotes, deleteNotes};
+export default {mainPage, getNotesAll, getNotesById, addNotes, updateNotes, deleteNotes};

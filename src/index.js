@@ -1,5 +1,5 @@
-const express = require('express');
-const routes = require('./routes/notes.routes.js');
+import express from 'express';
+import routes from './routes/notes.routes.js';
 const port = 3000;
 const crud = express();
 

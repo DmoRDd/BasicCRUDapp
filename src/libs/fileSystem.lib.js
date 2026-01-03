@@ -1,5 +1,5 @@
-const fs = require('fs');
-const path = require("path");
+import fs from 'fs';
+import path from 'path';
 const notesDataPath = path.join(__dirname, "../data/db.json");
 
 const readData = () => {
@@ -12,7 +12,7 @@ const readData = () => {
 // }
 // veriyi db de kaydetmek istersek bunu kullaniriz
 
-module.exports = {
+export default {
     readData
     //writeData
-}
+};

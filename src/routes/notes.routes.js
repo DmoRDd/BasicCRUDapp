@@ -1,5 +1,5 @@
-const express = require('express');
-const controllers = require('../controllers/notes.controller');
+import express from 'express';
+import controllers from '../controllers/notes.controller';
 
 const router = express.Router();
 
@@ -15,4 +15,4 @@ router.put("/notes/:id", controllers.updateNotes);
 
 router.delete("/notes/:id", controllers.deleteNotes);
 
-module.exports = router;
+export default router;
